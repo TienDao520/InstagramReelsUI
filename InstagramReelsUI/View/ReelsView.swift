@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ReelsView: View {
     
     @State var currentReel = ""
+    
+    // Extracting AVPlayer from media Files
+    @State var reels = MediaFileJson.map { item -> Reel in
+        let url = Bundle.main.path(forResource: item.url, ofType: "mp4") ?? ""
+        let player = AVPlayer(url: URL(fileURLWithPath: url))
+        return Reel(player:player,mediaFile: item)
+    }
     
     var body: some View {
         // Setting Width and height for rotated View
@@ -17,39 +25,13 @@ struct ReelsView: View {
             let size = proxy.size
             ///Vertical Page Tab View
             TabView(selection: $currentReel){
-                ForEach(MediaFileJson){media in
-                    VStack{
-                        Text("TienDao")
-                        
-                        Spacer()
-                        
-//                        ForEach(MediaFileJson){media in
-//                                VStack{
-//                                    Text("Hello")
-//
-//                                    Spacer()
-//
-//                                    Text("Hello")
-//                                        .frame(maxHeight: .infinity, alignment: .trailing)
-//                                        .foregroundColor(.red)
-//                                }
-//                                //setting width
-//                                .frame(width: size.width)
-//                                    .padding()
-//
-//                        }
-                       
-                        
-                        Text("Description")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                    }
+                ForEach($reels){$reel in
+                    ReelsPlayer(reel: $reel)
                     //setting width
                     .frame(width: size.width)
                     .padding()
                     //Rotating Content
                     .rotationEffect(.init(degrees: -90))
-                    
                     
                 }
             }
@@ -67,5 +49,16 @@ struct ReelsView: View {
 struct ReelsView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct ReelsPlayer: View{
+    
+    @Binding var reel: Reel
+    
+    var body: some View {
+        ZStack{
+            
+        }
     }
 }
