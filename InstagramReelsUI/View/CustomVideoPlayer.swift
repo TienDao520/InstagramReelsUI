@@ -19,14 +19,15 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
         controller.player = player
         controller.showsPlaybackControls = false
         
+        controller.videoGravity = .resizeAspectFill
+        
         return controller
     }
     
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
-        <#code#>
+        
     }
-    
-    typealias UIViewControllerType = AVPlayerViewController
+
 
     
     

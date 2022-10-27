@@ -58,7 +58,11 @@ struct ReelsPlayer: View{
     
     var body: some View {
         ZStack{
-            
+            // Check nil value
+            if let player = reel.player{
+                
+                CustomVideoPlayer(player: player)
+            }
         }
     }
 }
