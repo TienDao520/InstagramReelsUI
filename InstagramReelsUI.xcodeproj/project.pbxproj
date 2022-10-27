@@ -11,6 +11,15 @@
 		377FF325290B143D00C22F89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF324290B143D00C22F89 /* ContentView.swift */; };
 		377FF327290B143F00C22F89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377FF326290B143F00C22F89 /* Assets.xcassets */; };
 		377FF32A290B143F00C22F89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377FF329290B143F00C22F89 /* Preview Assets.xcassets */; };
+		377FF344290B193300C22F89 /* Reel4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377FF33E290B193200C22F89 /* Reel4.mp4 */; };
+		377FF345290B193300C22F89 /* Reel3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377FF33F290B193200C22F89 /* Reel3.mp4 */; };
+		377FF346290B193300C22F89 /* Reel2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377FF340290B193200C22F89 /* Reel2.mp4 */; };
+		377FF347290B193300C22F89 /* Reel5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377FF341290B193200C22F89 /* Reel5.mp4 */; };
+		377FF348290B193300C22F89 /* Reel6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377FF342290B193200C22F89 /* Reel6.mp4 */; };
+		377FF349290B193300C22F89 /* Reel1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 377FF343290B193300C22F89 /* Reel1.mp4 */; };
+		377FF34D290B1EAD00C22F89 /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF34C290B1EAD00C22F89 /* MediaFile.swift */; };
+		377FF353290B1FE000C22F89 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF352290B1FE000C22F89 /* HomeFeedView.swift */; };
+		377FF355290B213D00C22F89 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF354290B213D00C22F89 /* ReelsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		377FF324290B143D00C22F89 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		377FF326290B143F00C22F89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		377FF329290B143F00C22F89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		377FF33E290B193200C22F89 /* Reel4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel4.mp4; sourceTree = "<group>"; };
+		377FF33F290B193200C22F89 /* Reel3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel3.mp4; sourceTree = "<group>"; };
+		377FF340290B193200C22F89 /* Reel2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel2.mp4; sourceTree = "<group>"; };
+		377FF341290B193200C22F89 /* Reel5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel5.mp4; sourceTree = "<group>"; };
+		377FF342290B193200C22F89 /* Reel6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel6.mp4; sourceTree = "<group>"; };
+		377FF343290B193300C22F89 /* Reel1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel1.mp4; sourceTree = "<group>"; };
+		377FF34C290B1EAD00C22F89 /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
+		377FF352290B1FE000C22F89 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
+		377FF354290B213D00C22F89 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,12 @@
 		377FF316290B143D00C22F89 = {
 			isa = PBXGroup;
 			children = (
+				377FF343290B193300C22F89 /* Reel1.mp4 */,
+				377FF340290B193200C22F89 /* Reel2.mp4 */,
+				377FF33F290B193200C22F89 /* Reel3.mp4 */,
+				377FF33E290B193200C22F89 /* Reel4.mp4 */,
+				377FF341290B193200C22F89 /* Reel5.mp4 */,
+				377FF342290B193200C22F89 /* Reel6.mp4 */,
 				377FF321290B143D00C22F89 /* InstagramReelsUI */,
 				377FF320290B143D00C22F89 /* Products */,
 			);
@@ -51,6 +75,8 @@
 		377FF321290B143D00C22F89 /* InstagramReelsUI */ = {
 			isa = PBXGroup;
 			children = (
+				377FF34B290B196300C22F89 /* Model */,
+				377FF34A290B195500C22F89 /* View */,
 				377FF322290B143D00C22F89 /* InstagramReelsUIApp.swift */,
 				377FF324290B143D00C22F89 /* ContentView.swift */,
 				377FF326290B143F00C22F89 /* Assets.xcassets */,
@@ -65,6 +91,23 @@
 				377FF329290B143F00C22F89 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		377FF34A290B195500C22F89 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				377FF352290B1FE000C22F89 /* HomeFeedView.swift */,
+				377FF354290B213D00C22F89 /* ReelsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		377FF34B290B196300C22F89 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				377FF34C290B1EAD00C22F89 /* MediaFile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +168,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377FF344290B193300C22F89 /* Reel4.mp4 in Resources */,
+				377FF345290B193300C22F89 /* Reel3.mp4 in Resources */,
+				377FF346290B193300C22F89 /* Reel2.mp4 in Resources */,
+				377FF347290B193300C22F89 /* Reel5.mp4 in Resources */,
+				377FF348290B193300C22F89 /* Reel6.mp4 in Resources */,
+				377FF349290B193300C22F89 /* Reel1.mp4 in Resources */,
 				377FF32A290B143F00C22F89 /* Preview Assets.xcassets in Resources */,
 				377FF327290B143F00C22F89 /* Assets.xcassets in Resources */,
 			);
@@ -138,7 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				377FF325290B143D00C22F89 /* ContentView.swift in Sources */,
+				377FF355290B213D00C22F89 /* ReelsView.swift in Sources */,
+				377FF353290B1FE000C22F89 /* HomeFeedView.swift in Sources */,
 				377FF323290B143D00C22F89 /* InstagramReelsUIApp.swift in Sources */,
+				377FF34D290B1EAD00C22F89 /* MediaFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
