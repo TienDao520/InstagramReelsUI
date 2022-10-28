@@ -44,6 +44,7 @@ struct ReelsView: View {
             .frame(width: size.width)
         }
         .ignoresSafeArea(.all, edges: .top)
+        .background(Color.black.ignoresSafeArea())
     }
 }
 
