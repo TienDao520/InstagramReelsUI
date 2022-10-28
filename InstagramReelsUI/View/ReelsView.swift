@@ -29,10 +29,10 @@ struct ReelsView: View {
                     ReelsPlayer(reel: $reel)
                     //setting width
                     .frame(width: size.width)
-                    .padding()
+//                    .padding()
                     //Rotating Content
                     .rotationEffect(.init(degrees: -90))
-                    
+                    .ignoresSafeArea(.all, edges: .top)
                 }
             }
             /// View Rotation
@@ -43,6 +43,7 @@ struct ReelsView: View {
             /// seting max width
             .frame(width: size.width)
         }
+        .ignoresSafeArea(.all, edges: .top)
     }
 }
 
