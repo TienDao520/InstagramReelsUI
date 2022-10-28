@@ -45,6 +45,11 @@ struct HomeFeedView: View {
             }
             .padding(.horizontal)
             .padding(.vertical,10)
+            .overlay(Divider(), alignment: .top)
+            //If view is changed to reels color to black
+            //In iOS 15 it will automatically fill safe area for bottom tabs area
+            .background(currentTab == "Reels" ? .black : .clear)
+            
         }
         
         
@@ -54,7 +59,7 @@ struct HomeFeedView: View {
 struct HomeFeedView_Previews: PreviewProvider {
     static var previews: some View {
         HomeFeedView()
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.light)
     }
 }
 
@@ -84,7 +89,7 @@ struct TabBarButton: View{
                         .frame(width: 25, height: 25)
                 }
             }
-            .foregroundColor(currentTab == image ? .primary: .gray)
+            .foregroundColor(currentTab == image ? currentTab == "Reels" ? .white : .primary : .gray)
             .frame(maxWidth: .infinity)
         }
         
