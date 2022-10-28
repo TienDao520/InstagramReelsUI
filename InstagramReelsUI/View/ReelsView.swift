@@ -64,6 +64,35 @@ struct ReelsPlayer: View{
             if let player = reel.player{
                 
                 CustomVideoPlayer(player: player)
+                
+                VStack{
+                    HStack(alignment: .bottom) {
+                        
+                        VStack(alignment: .leading, spacing: 10) {
+                            HStack(spacing: 15) {
+                                Image("profile")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 35)
+                                    .clipShape(Circle())
+                                Text("Tien Dao")
+                                    .font(.callout.bold())
+                                
+                                Button {
+                                    
+                                } label: {
+                                    Text("Follow")
+                                        .font(.caption.bold())
+                                }
+                                
+                            }
+                            
+                            
+                        }
+                    }
+                }
+                .foregroundColor(.white)
+                .frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
     }
