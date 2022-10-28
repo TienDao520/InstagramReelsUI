@@ -58,6 +58,9 @@ struct ReelsPlayer: View{
     
     @Binding var reel: Reel
     
+    //Expanding title when it is tapped
+    @State var showMore = false
+    
     var body: some View {
         ZStack{
             // Check nil value
@@ -87,7 +90,44 @@ struct ReelsPlayer: View{
                                 
                             }
                             
-                            
+                            //Title  Custom View...
+                            ZStack{
+                                if showMore{
+                                    
+                                    ScrollView(.vertical, showsIndicators: false) {
+                                        
+                                        // Added extra text
+                                        Text(reel.mediaFile.title + sampleText)
+                                            .font(.callout)
+                                            .fontWeight(.semibold)
+//                                            .lineLimit(1)
+                                    }
+                                    .frame(height: 120)
+                                }
+                                else{
+                                    
+                                    Button {
+                                        
+                                        withAnimation{showMore.toggle()}
+                                        
+                                    } label: {
+                                        HStack{
+                                            
+                                            Text(reel.mediaFile.title)
+                                                .font(.callout)
+                                                .fontWeight(.semibold)
+                                                .lineLimit(1)
+                                            
+                                            Text("more")
+                                                .font(.callout.bold())
+                                                .foregroundColor(.gray)
+                                        }
+                                        .padding(.top,7)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                    }
+
+                                }
+                            }
                         }
                     }
                 }
@@ -97,3 +137,6 @@ struct ReelsPlayer: View{
         }
     }
 }
+
+
+let sampleText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
