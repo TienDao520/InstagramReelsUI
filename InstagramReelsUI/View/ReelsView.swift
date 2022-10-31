@@ -68,80 +68,96 @@ struct ReelsPlayer: View{
         VStack{
             // Check nil value
             if let player = reel.player{
-//                UserInfo(reel: reel)
-                CustomVideoPlayer(player: player)
+                ZStack{
+                    CustomVideoPlayer(player: player)
+                    
+                    Color.black.opacity(showMore ? 0.35: 0)
+                        .onTapGesture {
+                            //Closing
+                            withAnimation{showMore.toggle()}
+                        }
+                }
                 
-//                VStack{
-//                    HStack(alignment: .bottom) {
-//
-//                        VStack(alignment: .leading, spacing: 10) {
-//                            HStack(spacing: 15) {
-//                                Image("profile")
-//                                    .resizable()
-//                                    .aspectRatio(contentMode: .fill)
-//                                    .frame(width: 35, height: 35)
-//                                    .clipShape(Circle())
-//                                Text("Tien Dao")
-//                                    .font(.callout.bold())
-//
-//                                Button {
-//
-//                                } label: {
-//                                    Text("Follow")
-//                                        .font(.caption.bold())
-//                                }
-//
-//                            }
-//
-//                            //Title  Custom View...
-//                            ZStack{
-//                                if showMore{
-//
-//                                    ScrollView(.vertical, showsIndicators: false) {
-//
-//                                        // Added extra text
-//                                        Text(reel.mediaFile.title + sampleText)
-//                                            .font(.callout)
-//                                            .fontWeight(.semibold)
-////                                            .lineLimit(1)
-//                                    }
-//                                    .frame(height: 120)
-//                                }
-//                                else{
-//
-//                                    Button {
-//
-//                                        withAnimation{showMore.toggle()}
-//
-//                                    } label: {
-//                                        HStack{
-//
-//                                            Text(reel.mediaFile.title)
-//                                                .font(.callout)
-//                                                .fontWeight(.semibold)
-//                                                .lineLimit(1)
-//
-//                                            Text("more")
-//                                                .font(.callout.bold())
-//                                                .foregroundColor(.gray)
-//                                        }
-//                                        .padding(.top,7)
-//                                        .frame(maxWidth: .infinity, alignment: .leading)
-//                                    }
-//
-//                                }
-//                            }
-//                        }
-//
-//                        Spacer(minLength: 20)
-//
-//                        // List of Buttons
-//                        ActionButtons(reel: reel)
-//
-//                    }
-//                }
-                UserInfo(reel: reel)
+                
+                
+                VStack{
+                    HStack(alignment: .bottom) {
+
+                        VStack(alignment: .leading, spacing: 10) {
+                            HStack(spacing: 15) {
+                                Image("profile")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 35, height: 35)
+                                    .clipShape(Circle())
+                                Text("Tien Dao")
+                                    .font(.callout.bold())
+
+                                Button {
+
+                                } label: {
+                                    Text("Follow")
+                                        .font(.caption.bold())
+                                }
+
+                            }
+
+                            //Title  Custom View...
+                            ZStack{
+                                if showMore{
+
+                                    ScrollView(.vertical, showsIndicators: false) {
+
+                                        // Added extra text
+                                        Text(reel.mediaFile.title + sampleText)
+                                            .font(.callout)
+                                            .fontWeight(.semibold)
+//                                            .lineLimit(1)
+                                    }
+                                    .frame(height: 120)
+                                    .onTapGesture {
+                                        withAnimation {
+                                            showMore.toggle()
+                                        }
+                                    }
+                                }
+                                else{
+
+                                    Button {
+
+                                        withAnimation{showMore.toggle()}
+
+                                    } label: {
+                                        HStack{
+
+                                            Text(reel.mediaFile.title)
+                                                .font(.callout)
+                                                .fontWeight(.semibold)
+                                                .lineLimit(1)
+
+                                            Text("more")
+                                                .font(.callout.bold())
+                                                .foregroundColor(.gray)
+                                        }
+                                        .padding(.top,7)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                    }
+
+                                }
+                            }
+                        }
+
+                        Spacer(minLength: 20)
+
+                        // List of Buttons
+                        ActionButtons(reel: reel)
+
+                    }
+                }
+//                UserInfo(reel: reel)
                 .foregroundColor(.white)
+//                .padding(.horizontal)
+                
 //                .frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
@@ -229,7 +245,7 @@ struct ActionButtons: View{
     var reel: Reel
     
     var body: some View {
-        VStack(spacing: 25) {
+        HStack(spacing: 25) {
             Button {
                 
             } label: {
@@ -237,10 +253,51 @@ struct ActionButtons: View{
                     Image(systemName: "suit.heart")
                         .font(.title)
                     
-                    Text("123K")
-                        .font(.caption.bold())
+//                    Text("123K")
+//                        .font(.caption.bold())
                 }
             }
+            
+            Button {
+                
+            } label: {
+                VStack(spacing: 10){
+                    Image(systemName: "bubble.right")
+                        .font(.title)
+                    
+//                    Text("123K")
+//                        .font(.caption.bold())
+                }
+            }
+            
+            Button {
+                
+            } label: {
+                VStack(spacing: 10){
+                    Image(systemName: "paperplane")
+                        .font(.title)
+                    
+//                    Text("123K")
+//                        .font(.caption.bold())
+                }
+            }
+            
+            Button {
+                
+            } label: {
+            
+                    Image("menu")
+                        .resizable()
+                        .renderingMode(.template)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 20, height: 20)
+                        .rotationEffect(.init(degrees: 90))
+                    
+//                    Text("123K")
+//                        .font(.caption.bold())
+                
+            }
+            
 
         }
     }
