@@ -29,7 +29,7 @@ struct ReelsView: View {
                     ReelsPlayer(reel: $reel)
                     //setting width
                     .frame(width: size.width)
-//                    .padding()
+                    .padding()
                     //Rotating Content
                     .rotationEffect(.init(degrees: -90))
                     .ignoresSafeArea(.all, edges: .top)
