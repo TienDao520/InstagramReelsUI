@@ -1,13 +1,13 @@
 //
-//  HomeFeedView.swift
+//  MediaDetailView.swift
 //  InstagramReelsUI
 //
-//  Created by Tien Dao on 2022-10-27.
+//  Created by Tien Dao on 2022-10-31.
 //
 
 import SwiftUI
 
-struct HomeFeedView: View {
+struct MediaDetailView: View {
     //Hiding Tab Bar
     init() {
         UITabBar.appearance().isHidden = true
@@ -19,10 +19,6 @@ struct HomeFeedView: View {
     var body: some View {
         ///Custom Tab View
         VStack(spacing: 0) {
-            HStack(spacing: 0){
-                Text("Intellyon")
-            }
-            
             TabView(selection: $currentTab){
                 Text("Home")
                     .tag("house.fill")
@@ -32,7 +28,7 @@ struct HomeFeedView: View {
                 
                 
                 ///Reels View
-                ReelsView()
+                MediaDetailReelsView()
                     .tag("Reels")
                 
                 Text("Liked")
@@ -47,7 +43,6 @@ struct HomeFeedView: View {
                     
                 }
             }
-
             .padding(.horizontal)
             .padding(.vertical,10)
             .overlay(Divider(), alignment: .top)
@@ -61,42 +56,42 @@ struct HomeFeedView: View {
     }
 }
 
-struct HomeFeedView_Previews: PreviewProvider {
+struct MediaDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeFeedView()
+        MediaDetailView()
 //            .preferredColorScheme(.light)
     }
 }
 
-// Tab Bar Button
-
-struct TabBarButton: View{
-    var image: String
-    var isSystemImage: Bool
-    @Binding var currentTab: String
-    
-//    @State var currentTab: String
-    
-    var body: some View{
-        Button {
-            withAnimation{currentTab = image}
-        } label: {
-            ZStack{
-                if isSystemImage{
-                    Image(systemName: image)
-                        .font(.title2)
-                }
-                else{
-                    Image(image)
-                        .resizable()
-                        .renderingMode(.template)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 25, height: 25)
-                }
-            }
-            .foregroundColor(currentTab == image ? currentTab == "Reels" ? .white : .primary : .gray)
-            .frame(maxWidth: .infinity)
-        }
-        
-    }
-}
+//// Tab Bar Button
+//
+//struct TabBarButton: View{
+//    var image: String
+//    var isSystemImage: Bool
+//    @Binding var currentTab: String
+//
+////    @State var currentTab: String
+//
+//    var body: some View{
+//        Button {
+//            withAnimation{currentTab = image}
+//        } label: {
+//            ZStack{
+//                if isSystemImage{
+//                    Image(systemName: image)
+//                        .font(.title2)
+//                }
+//                else{
+//                    Image(image)
+//                        .resizable()
+//                        .renderingMode(.template)
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 25, height: 25)
+//                }
+//            }
+//            .foregroundColor(currentTab == image ? currentTab == "Reels" ? .white : .primary : .gray)
+//            .frame(maxWidth: .infinity)
+//        }
+//
+//    }
+//}

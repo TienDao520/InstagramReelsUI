@@ -22,6 +22,8 @@
 		377FF355290B213D00C22F89 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF354290B213D00C22F89 /* ReelsView.swift */; };
 		377FF357290B379A00C22F89 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF356290B379A00C22F89 /* Reel.swift */; };
 		377FF359290B3D5600C22F89 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF358290B3D5600C22F89 /* CustomVideoPlayer.swift */; };
+		377FF35B2910331500C22F89 /* MediaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF35A2910331500C22F89 /* MediaDetailView.swift */; };
+		377FF35D291033A900C22F89 /* MediaDetailReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FF35C291033A900C22F89 /* MediaDetailReelsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		377FF354290B213D00C22F89 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 		377FF356290B379A00C22F89 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		377FF358290B3D5600C22F89 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		377FF35A2910331500C22F89 /* MediaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailView.swift; sourceTree = "<group>"; };
+		377FF35C291033A900C22F89 /* MediaDetailReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailReelsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				377FF352290B1FE000C22F89 /* HomeFeedView.swift */,
 				377FF354290B213D00C22F89 /* ReelsView.swift */,
 				377FF358290B3D5600C22F89 /* CustomVideoPlayer.swift */,
+				377FF35A2910331500C22F89 /* MediaDetailView.swift */,
+				377FF35C291033A900C22F89 /* MediaDetailReelsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,12 +198,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377FF35D291033A900C22F89 /* MediaDetailReelsView.swift in Sources */,
 				377FF359290B3D5600C22F89 /* CustomVideoPlayer.swift in Sources */,
 				377FF325290B143D00C22F89 /* ContentView.swift in Sources */,
 				377FF357290B379A00C22F89 /* Reel.swift in Sources */,
 				377FF355290B213D00C22F89 /* ReelsView.swift in Sources */,
 				377FF353290B1FE000C22F89 /* HomeFeedView.swift in Sources */,
 				377FF323290B143D00C22F89 /* InstagramReelsUIApp.swift in Sources */,
+				377FF35B2910331500C22F89 /* MediaDetailView.swift in Sources */,
 				377FF34D290B1EAD00C22F89 /* MediaFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
