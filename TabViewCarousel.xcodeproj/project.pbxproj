@@ -19,6 +19,7 @@
 		3726E27C2912E27300E9F674 /* Reel1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3726E2762912E27300E9F674 /* Reel1.mp4 */; };
 		3726E2812912E2D500E9F674 /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2802912E2D500E9F674 /* MediaFile.swift */; };
 		3726E2832912E33900E9F674 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2822912E33900E9F674 /* Reel.swift */; };
+		3726E2852912E3B400E9F674 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2842912E3B400E9F674 /* ReelsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3726E2762912E27300E9F674 /* Reel1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel1.mp4; sourceTree = "<group>"; };
 		3726E2802912E2D500E9F674 /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
 		3726E2822912E33900E9F674 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
+		3726E2842912E3B400E9F674 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +75,8 @@
 		3726E2622912E0CC00E9F674 /* TabViewCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				3726E27E2912E2B500E9F674 /* View */,
 				3726E27D2912E2AE00E9F674 /* Model */,
+				3726E27E2912E2B500E9F674 /* View */,
 				3726E2632912E0CC00E9F674 /* TabViewCarouselApp.swift */,
 				3726E2652912E0CC00E9F674 /* ContentView.swift */,
 				3726E2672912E0CD00E9F674 /* Assets.xcassets */,
@@ -103,6 +105,7 @@
 		3726E27E2912E2B500E9F674 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3726E2842912E3B400E9F674 /* ReelsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3726E2662912E0CC00E9F674 /* ContentView.swift in Sources */,
+				3726E2852912E3B400E9F674 /* ReelsView.swift in Sources */,
 				3726E2832912E33900E9F674 /* Reel.swift in Sources */,
 				3726E2642912E0CC00E9F674 /* TabViewCarouselApp.swift in Sources */,
 				3726E2812912E2D500E9F674 /* MediaFile.swift in Sources */,
