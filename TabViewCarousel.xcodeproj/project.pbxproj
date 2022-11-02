@@ -21,6 +21,9 @@
 		3726E2832912E33900E9F674 /* Reel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2822912E33900E9F674 /* Reel.swift */; };
 		3726E2852912E3B400E9F674 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2842912E3B400E9F674 /* ReelsView.swift */; };
 		3726E2872912E56500E9F674 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2862912E56500E9F674 /* CustomVideoPlayer.swift */; };
+		3726E2892912EEE500E9F674 /* ReelJourneyHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2882912EEE500E9F674 /* ReelJourneyHorizontal.swift */; };
+		3726E28B2912FD9B00E9F674 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E28A2912FD9B00E9F674 /* Journey.swift */; };
+		3726E28D291302B800E9F674 /* ReelJourneyVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E28C291302B800E9F674 /* ReelJourneyVertical.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		3726E2822912E33900E9F674 /* Reel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reel.swift; sourceTree = "<group>"; };
 		3726E2842912E3B400E9F674 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 		3726E2862912E56500E9F674 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		3726E2882912EEE500E9F674 /* ReelJourneyHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelJourneyHorizontal.swift; sourceTree = "<group>"; };
+		3726E28A2912FD9B00E9F674 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		3726E28C291302B800E9F674 /* ReelJourneyVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelJourneyVertical.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 			children = (
 				3726E2802912E2D500E9F674 /* MediaFile.swift */,
 				3726E2822912E33900E9F674 /* Reel.swift */,
+				3726E28A2912FD9B00E9F674 /* Journey.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 			children = (
 				3726E2842912E3B400E9F674 /* ReelsView.swift */,
 				3726E2862912E56500E9F674 /* CustomVideoPlayer.swift */,
+				3726E2882912EEE500E9F674 /* ReelJourneyHorizontal.swift */,
+				3726E28C291302B800E9F674 /* ReelJourneyVertical.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,7 +202,10 @@
 				3726E2852912E3B400E9F674 /* ReelsView.swift in Sources */,
 				3726E2832912E33900E9F674 /* Reel.swift in Sources */,
 				3726E2642912E0CC00E9F674 /* TabViewCarouselApp.swift in Sources */,
+				3726E28D291302B800E9F674 /* ReelJourneyVertical.swift in Sources */,
+				3726E28B2912FD9B00E9F674 /* Journey.swift in Sources */,
 				3726E2812912E2D500E9F674 /* MediaFile.swift in Sources */,
+				3726E2892912EEE500E9F674 /* ReelJourneyHorizontal.swift in Sources */,
 				3726E2872912E56500E9F674 /* CustomVideoPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

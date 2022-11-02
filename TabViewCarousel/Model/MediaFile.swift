@@ -24,3 +24,23 @@ var MediaFileJson = [
     MediaFile(url: "Reel5", title: "Reel 5 title"),
     MediaFile(url: "Reel6", title: "Reel 6 title"),
 ]
+
+
+var MediaFileJson2 = [
+    MediaFile(url: "Reel1", title: "Reel 1 title"),
+    MediaFile(url: "Reel2", title: "Reel 2 title"),
+    MediaFile(url: "Reel3", title: "Reel 3 title"),
+    MediaFile(url: "Reel4", title: "Reel 4 title"),
+    MediaFile(url: "Reel5", title: "Reel 5 title"),
+    MediaFile(url: "Reel6", title: "Reel 6 title"),
+]
+
+var MediaFileJson3 = [
+    MediaFile(url: "Reel1", title: "Reel 1 title"),
+    MediaFile(url: "Reel2", title: "Reel 2 title"),
+    MediaFile(url: "Reel3", title: "Reel 3 title"),
+    MediaFile(url: "Reel4", title: "Reel 4 title"),
+    MediaFile(url: "Reel5", title: "Reel 5 title"),
+    MediaFile(url: "Reel6", title: "Reel 6 title"),
+]
+
