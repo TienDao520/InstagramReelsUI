@@ -17,6 +17,7 @@
 		3726E27A2912E27300E9F674 /* Reel4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3726E2742912E27300E9F674 /* Reel4.mp4 */; };
 		3726E27B2912E27300E9F674 /* Reel5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3726E2752912E27300E9F674 /* Reel5.mp4 */; };
 		3726E27C2912E27300E9F674 /* Reel1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3726E2762912E27300E9F674 /* Reel1.mp4 */; };
+		3726E2812912E2D500E9F674 /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726E2802912E2D500E9F674 /* MediaFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		3726E2742912E27300E9F674 /* Reel4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel4.mp4; sourceTree = "<group>"; };
 		3726E2752912E27300E9F674 /* Reel5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel5.mp4; sourceTree = "<group>"; };
 		3726E2762912E27300E9F674 /* Reel1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel1.mp4; sourceTree = "<group>"; };
+		3726E2802912E2D500E9F674 /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 		3726E2622912E0CC00E9F674 /* TabViewCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				3726E27E2912E2B500E9F674 /* View */,
+				3726E27D2912E2AE00E9F674 /* Model */,
 				3726E2632912E0CC00E9F674 /* TabViewCarouselApp.swift */,
 				3726E2652912E0CC00E9F674 /* ContentView.swift */,
 				3726E2672912E0CD00E9F674 /* Assets.xcassets */,
@@ -83,6 +87,21 @@
 				3726E26A2912E0CD00E9F674 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3726E27D2912E2AE00E9F674 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3726E2802912E2D500E9F674 /* MediaFile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3726E27E2912E2B500E9F674 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +182,7 @@
 			files = (
 				3726E2662912E0CC00E9F674 /* ContentView.swift in Sources */,
 				3726E2642912E0CC00E9F674 /* TabViewCarouselApp.swift in Sources */,
+				3726E2812912E2D500E9F674 /* MediaFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
