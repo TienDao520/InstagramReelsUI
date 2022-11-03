@@ -11,6 +11,7 @@
 		376A672029142A35005B55E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A671F29142A35005B55E4 /* ContentView.swift */; };
 		376A672229142A36005B55E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376A672129142A36005B55E4 /* Assets.xcassets */; };
 		376A672529142A36005B55E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376A672429142A36005B55E4 /* Preview Assets.xcassets */; };
+		376A672E29142B3C005B55E4 /* MediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A672D29142B3C005B55E4 /* MediaFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		376A671F29142A35005B55E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		376A672129142A36005B55E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		376A672429142A36005B55E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		376A672D29142B3C005B55E4 /* MediaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		376A671C29142A35005B55E4 /* ScrollAndTabView */ = {
 			isa = PBXGroup;
 			children = (
+				376A672B29142AF8005B55E4 /* Model */,
+				376A672C29142B00005B55E4 /* View */,
 				376A671D29142A35005B55E4 /* ScrollAndTabViewApp.swift */,
 				376A671F29142A35005B55E4 /* ContentView.swift */,
 				376A672129142A36005B55E4 /* Assets.xcassets */,
@@ -65,6 +69,21 @@
 				376A672429142A36005B55E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		376A672B29142AF8005B55E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				376A672D29142B3C005B55E4 /* MediaFile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		376A672C29142B00005B55E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +158,7 @@
 			files = (
 				376A672029142A35005B55E4 /* ContentView.swift in Sources */,
 				376A671E29142A35005B55E4 /* ScrollAndTabViewApp.swift in Sources */,
+				376A672E29142B3C005B55E4 /* MediaFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
