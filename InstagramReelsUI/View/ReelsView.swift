@@ -16,7 +16,15 @@ struct ReelsView: View {
     @State var reels = MediaFileJson.map { item -> Reel in
         let url = Bundle.main.path(forResource: item.url, ofType: "mp4") ?? ""
         let player = AVPlayer(url: URL(fileURLWithPath: url))
+//        let player: AVPlayer
+        
+//        let asset = AVURLAsset(url: URL(string:url)!)
+        
+//        let playerItem = AVPlayerItem(asset: asset)
+//        let player = AVPlayer(playerItem: playerItem)
+
         return Reel(player:player,mediaFile: item)
+
     }
     
     var body: some View {
@@ -24,7 +32,7 @@ struct ReelsView: View {
         GeometryReader{proxy in
             let size = proxy.size
             Spacer()
-            
+
             ///Vertical Page Tab View
             TabView(selection: $currentReel){
                 ForEach($reels){$reel in
@@ -42,10 +50,21 @@ struct ReelsView: View {
             /// Since view is rotated setting height as width
             .frame(width: size.height)
             .tabViewStyle(.page(indexDisplayMode: .never))
+//            .tabViewStyle(PageTabViewStyle())
+//            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
             /// seting max width
             .frame(width: size.width)
             Spacer()
         }
+        
+//        GeometryReader { proxy -> Color in
+//            if let player = reels[0].player {
+//                player.play()
+//            }
+//
+//            return Color.clear
+//        }
+        
         .ignoresSafeArea(.all, edges: .top)
         .background(Color.black.ignoresSafeArea())
     }
@@ -54,6 +73,7 @@ struct ReelsView: View {
 struct ReelsView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ReelsView()
     }
 }
 
@@ -65,102 +85,128 @@ struct ReelsPlayer: View{
     @State var showMore = false
     
     var body: some View {
-        VStack{
-            // Check nil value
-            if let player = reel.player{
-                ZStack{
-                    CustomVideoPlayer(player: player)
-                    
-                    Color.black.opacity(showMore ? 0.35: 0)
-                        .onTapGesture {
-                            //Closing
-                            withAnimation{showMore.toggle()}
-                        }
-                }
+            Group{
                 
                 
                 
                 VStack{
-                    HStack(alignment: .bottom) {
+                    // Check nil value
+                    if let player = reel.player{
+                        ZStack{
+                            CustomVideoPlayer(player: player)
+                            
+                            // Control playing video based on offset
+                            GeometryReader { proxy -> Color in
+                                let minY = proxy.frame(in: .global).minY
+                                let size = proxy.size
 
-                        VStack(alignment: .leading, spacing: 10) {
-                            HStack(spacing: 15) {
-                                Image("profile")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 35, height: 35)
-                                    .clipShape(Circle())
-                                Text("Tien Dao")
-                                    .font(.callout.bold())
-
-                                Button {
-
-                                } label: {
-                                    Text("Follow")
-                                        .font(.caption.bold())
+                                DispatchQueue.main.async {
+                                    if -minY < (size.height / 2) && minY < (size.height / 2){
+//                                        try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+                                        player.play()
+                                    }
+                                    else{
+                                        player.pause()
+                                    }
                                 }
-
+                                return Color.clear
                             }
+//
+                            
 
-                            //Title  Custom View...
-                            ZStack{
-                                if showMore{
+                            Color.black.opacity(showMore ? 0.35: 0)
+                                .onTapGesture {
+                                    //Closing
+                                    withAnimation{showMore.toggle()}
+                                }
+                        }
+                        
+                        
+                        
+                        VStack{
+                            HStack(alignment: .bottom) {
 
-                                    ScrollView(.vertical, showsIndicators: false) {
+                                VStack(alignment: .leading, spacing: 10) {
+                                    HStack(spacing: 15) {
+                                        Image("profile")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 35, height: 35)
+                                            .clipShape(Circle())
+                                        Text("Tien Dao")
+                                            .font(.callout.bold())
 
-                                        // Added extra text
-                                        Text(reel.mediaFile.title + sampleText)
-                                            .font(.callout)
-                                            .fontWeight(.semibold)
-//                                            .lineLimit(1)
+                                        Button {
+
+                                        } label: {
+                                            Text("Follow")
+                                                .font(.caption.bold())
+                                        }
+
                                     }
-                                    .frame(height: 120)
-                                    .onTapGesture {
-                                        withAnimation {
-                                            showMore.toggle()
+
+                                    //Title  Custom View...
+                                    ZStack{
+                                        if showMore{
+
+                                            ScrollView(.vertical, showsIndicators: false) {
+
+                                                // Added extra text
+                                                Text(reel.mediaFile.title + sampleText)
+                                                    .font(.callout)
+                                                    .fontWeight(.semibold)
+        //                                            .lineLimit(1)
+                                            }
+                                            .frame(height: 120)
+                                            .onTapGesture {
+                                                withAnimation {
+                                                    showMore.toggle()
+                                                }
+                                            }
+                                        }
+                                        else{
+
+                                            Button {
+
+                                                withAnimation{showMore.toggle()}
+
+                                            } label: {
+                                                HStack{
+
+                                                    Text(reel.mediaFile.title)
+                                                        .font(.callout)
+                                                        .fontWeight(.semibold)
+                                                        .lineLimit(1)
+
+                                                    Text("more")
+                                                        .font(.callout.bold())
+                                                        .foregroundColor(.gray)
+                                                }
+                                                .padding(.top,7)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                            }
+
                                         }
                                     }
                                 }
-                                else{
 
-                                    Button {
+                                Spacer(minLength: 20)
 
-                                        withAnimation{showMore.toggle()}
+                                // List of Buttons
+                                ActionButtons(reel: reel)
 
-                                    } label: {
-                                        HStack{
-
-                                            Text(reel.mediaFile.title)
-                                                .font(.callout)
-                                                .fontWeight(.semibold)
-                                                .lineLimit(1)
-
-                                            Text("more")
-                                                .font(.callout.bold())
-                                                .foregroundColor(.gray)
-                                        }
-                                        .padding(.top,7)
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                    }
-
-                                }
                             }
                         }
-
-                        Spacer(minLength: 20)
-
-                        // List of Buttons
-                        ActionButtons(reel: reel)
-
+        //                UserInfo(reel: reel)
+                        .foregroundColor(.white)
+        //                .padding(.horizontal)
+                        
+        //                .frame(maxHeight: .infinity, alignment: .bottom)
                     }
                 }
-//                UserInfo(reel: reel)
-                .foregroundColor(.white)
-//                .padding(.horizontal)
-                
-//                .frame(maxHeight: .infinity, alignment: .bottom)
             }
-        }
+        
+        
     }
 }
 

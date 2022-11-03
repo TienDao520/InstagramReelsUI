@@ -19,8 +19,8 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
         controller.player = player
         controller.showsPlaybackControls = false
         
-        controller.videoGravity = .resizeAspectFill
-        
+//        controller.videoGravity = .resizeAspectFill
+        controller.view.isUserInteractionEnabled = false
         return controller
     }
     
