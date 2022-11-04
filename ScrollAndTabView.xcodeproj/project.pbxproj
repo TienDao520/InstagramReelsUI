@@ -18,8 +18,12 @@
 		376A673829142BB1005B55E4 /* Reel5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 376A673229142BB1005B55E4 /* Reel5.mp4 */; };
 		376A673929142BB1005B55E4 /* Reel1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 376A673329142BB1005B55E4 /* Reel1.mp4 */; };
 		376A673A29142BB1005B55E4 /* Reel6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 376A673429142BB1005B55E4 /* Reel6.mp4 */; };
-		376A673C29143245005B55E4 /* TabViewHorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A673B29143245005B55E4 /* TabViewHorizontalCell.swift */; };
+		376A673C29143245005B55E4 /* StepsViewHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A673B29143245005B55E4 /* StepsViewHorizontal.swift */; };
 		376A673E291432A8005B55E4 /* Journey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A673D291432A8005B55E4 /* Journey.swift */; };
+		376A674029143400005B55E4 /* HomeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A673F29143400005B55E4 /* HomeFeedView.swift */; };
+		37E44AD22914428500263047 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E44AD12914428500263047 /* Step.swift */; };
+		37E44AD5291446B400263047 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E44AD4291446B400263047 /* CustomVideoPlayer.swift */; };
+		37E44AD7291448DB00263047 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E44AD6291448DB00263047 /* ReelsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +39,12 @@
 		376A673229142BB1005B55E4 /* Reel5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel5.mp4; sourceTree = "<group>"; };
 		376A673329142BB1005B55E4 /* Reel1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel1.mp4; sourceTree = "<group>"; };
 		376A673429142BB1005B55E4 /* Reel6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reel6.mp4; sourceTree = "<group>"; };
-		376A673B29143245005B55E4 /* TabViewHorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewHorizontalCell.swift; sourceTree = "<group>"; };
+		376A673B29143245005B55E4 /* StepsViewHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewHorizontal.swift; sourceTree = "<group>"; };
 		376A673D291432A8005B55E4 /* Journey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journey.swift; sourceTree = "<group>"; };
+		376A673F29143400005B55E4 /* HomeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedView.swift; sourceTree = "<group>"; };
+		37E44AD12914428500263047 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		37E44AD4291446B400263047 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
+		37E44AD6291448DB00263047 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			children = (
 				376A672D29142B3C005B55E4 /* MediaFile.swift */,
 				376A673D291432A8005B55E4 /* Journey.swift */,
+				37E44AD12914428500263047 /* Step.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,7 +114,10 @@
 		376A672C29142B00005B55E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				376A673B29143245005B55E4 /* TabViewHorizontalCell.swift */,
+				376A673B29143245005B55E4 /* StepsViewHorizontal.swift */,
+				376A673F29143400005B55E4 /* HomeFeedView.swift */,
+				37E44AD4291446B400263047 /* CustomVideoPlayer.swift */,
+				37E44AD6291448DB00263047 /* ReelsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,11 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E44AD22914428500263047 /* Step.swift in Sources */,
 				376A672029142A35005B55E4 /* ContentView.swift in Sources */,
 				376A671E29142A35005B55E4 /* ScrollAndTabViewApp.swift in Sources */,
-				376A673C29143245005B55E4 /* TabViewHorizontalCell.swift in Sources */,
+				376A673C29143245005B55E4 /* StepsViewHorizontal.swift in Sources */,
 				376A672E29142B3C005B55E4 /* MediaFile.swift in Sources */,
 				376A673E291432A8005B55E4 /* Journey.swift in Sources */,
+				376A674029143400005B55E4 /* HomeFeedView.swift in Sources */,
+				37E44AD7291448DB00263047 /* ReelsView.swift in Sources */,
+				37E44AD5291446B400263047 /* CustomVideoPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +343,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
