@@ -11,6 +11,8 @@
 		373331AB2919A48F00D77D13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373331AA2919A48F00D77D13 /* ContentView.swift */; };
 		373331AD2919A49000D77D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373331AC2919A49000D77D13 /* Assets.xcassets */; };
 		373331B02919A49000D77D13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373331AF2919A49000D77D13 /* Preview Assets.xcassets */; };
+		373331B72919A9DE00D77D13 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373331B62919A9DE00D77D13 /* CarouselView.swift */; };
+		373331B92919AB2F00D77D13 /* ReelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373331B82919AB2F00D77D13 /* ReelsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		373331AA2919A48F00D77D13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		373331AC2919A49000D77D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373331AF2919A49000D77D13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		373331B62919A9DE00D77D13 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		373331B82919AB2F00D77D13 /* ReelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 				373331A82919A48F00D77D13 /* CarouselAndTabViewApp.swift */,
 				373331AA2919A48F00D77D13 /* ContentView.swift */,
 				373331AC2919A49000D77D13 /* Assets.xcassets */,
+				373331B62919A9DE00D77D13 /* CarouselView.swift */,
 				373331AE2919A49000D77D13 /* Preview Content */,
+				373331B82919AB2F00D77D13 /* ReelsView.swift */,
 			);
 			path = CarouselAndTabView;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				373331B92919AB2F00D77D13 /* ReelsView.swift in Sources */,
 				373331AB2919A48F00D77D13 /* ContentView.swift in Sources */,
+				373331B72919A9DE00D77D13 /* CarouselView.swift in Sources */,
 				373331A92919A48F00D77D13 /* CarouselAndTabViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
