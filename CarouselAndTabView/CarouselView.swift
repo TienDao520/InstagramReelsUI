@@ -50,6 +50,7 @@ private struct CarouselCardView: View {
                 .aspectRatio(contentMode: .fit)
                 .padding()
             Spacer()
+            
         }
         .opacity((card.id == state.activeCard || state.screenDrag != 0) ? 1.0 : 0.0)
         .frame(minWidth: width, maxHeight: .infinity, alignment: .center)
