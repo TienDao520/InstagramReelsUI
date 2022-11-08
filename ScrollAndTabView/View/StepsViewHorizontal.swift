@@ -49,20 +49,23 @@ struct StepsViewHorizontal: View {
                 ForEach($steps){$step in
                     StepsPlayer(step: $step)
                     //setting width
-                    .frame(width: size.width)
+//                    .frame(width: size.width)
                     .padding()
+//                    .gesture(DragGesture())
                     //Rotating Content
 //                    .rotationEffect(.init(degrees: -90))
-                    .ignoresSafeArea(.all, edges: .top)
+//                    .ignoresSafeArea(.all, edges: .top)
+                  
+                    
                 }
             }
 //            .frame(width: size.height)
             .tabViewStyle(.page(indexDisplayMode: .never))
+            
 //            .frame(width: size.width)
 
             Spacer()
         }
-        
         .ignoresSafeArea(.all, edges: .top)
         .background(Color.black.ignoresSafeArea())
     }

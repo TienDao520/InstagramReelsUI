@@ -93,10 +93,12 @@ struct ReelsView: View {
             .frame(width: size.height)
             .tabViewStyle(.page(indexDisplayMode: .never))
             .frame(width: size.width)
+            
             Spacer()
         }
         .ignoresSafeArea(.all, edges: .top)
         .background(Color.black.ignoresSafeArea())
+        
         
     }
 }
