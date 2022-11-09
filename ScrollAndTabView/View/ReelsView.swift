@@ -73,21 +73,37 @@ struct ReelsView: View {
             
             ///Vertical Page Tab View
             TabView(selection: $currentReel){
+//                ForEach(0 ..< MediaFileJsonSum.count) {index in
+//                    var steps = MediaFileJsonSum[index].map { item -> Step in
+//                        let url = Bundle.main.path(forResource: item.url, ofType: "mp4") ?? ""
+//                        let player = AVPlayer(url: URL(fileURLWithPath: url))
+//                        return Step(player:player,mediaFile: item)
+//                    }
+//
+//                    StepsViewHorizontal( steps: steps)
+//                        .frame(width: proxy.size.width, height: proxy.size.height)
+//                        .id(index)
+//                        .rotationEffect(.init(degrees: -90))
+////                        .ignoresSafeArea(.all, edges: .top)
+                ///}
+                ///
+                ///
+                
+                
+                
                 ForEach(0 ..< MediaFileJsonSum.count) {index in
                     var steps = MediaFileJsonSum[index].map { item -> Step in
                         let url = Bundle.main.path(forResource: item.url, ofType: "mp4") ?? ""
                         let player = AVPlayer(url: URL(fileURLWithPath: url))
                         return Step(player:player,mediaFile: item)
                     }
-
-                    StepsViewHorizontal( steps: steps)
+                    HorizontalScrollView(steps:steps)
                         .frame(width: proxy.size.width, height: proxy.size.height)
                         .id(index)
                         .rotationEffect(.init(degrees: -90))
-//                        .ignoresSafeArea(.all, edges: .top)
-
-
                 }
+                    
+
             }
             .rotationEffect(.init(degrees: 90))
             .frame(width: size.height)
