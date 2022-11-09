@@ -45,8 +45,11 @@ struct HorizontalScrollView: View {
                       "Hint Text",
                       text: $textInput,
                       onCommit: {
-                          if let num = Int(textInput) {
-                              value.scrollTo(Int(num))
+                          if let num = Int(textInput){
+                              if num < countStep {
+                                  value.scrollTo(Int(num))
+                              }
+                              
                           }
                           
                       }
