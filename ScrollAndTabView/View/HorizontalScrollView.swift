@@ -20,6 +20,8 @@ struct HorizontalScrollView: View {
     
     @State var currentSelection = ""
     
+    @State var textInput = "0"
+    
     struct ScrollOffsetKey: PreferenceKey {
         static var defaultValue: CGFloat = .zero
 
@@ -35,9 +37,28 @@ struct HorizontalScrollView: View {
             let countStep = steps.count
             Spacer()
             ScrollViewReader { value in
-                Button("Jump to 2nd Step") {
-                    value.scrollTo(1)
+                HStack{
+                    Button("<< First Step") {
+                        value.scrollTo(0)
+                    }
+                    TextField(
+                      "Hint Text",
+                      text: $textInput,
+                      onCommit: {
+                          value.scrollTo(Int(textInput))
+                      }
+                    )
+                    .keyboardType(.default)
+                    .padding()
+                    .foregroundColor(.orange)
+                    
+                    Button("Last Step >>") {
+                        value.scrollTo(countStep-1)
+                    }
                 }
+
+                
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     
                     LazyHStack(spacing: .zero) {
