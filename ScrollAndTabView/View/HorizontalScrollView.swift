@@ -45,7 +45,10 @@ struct HorizontalScrollView: View {
                       "Hint Text",
                       text: $textInput,
                       onCommit: {
-                          value.scrollTo(Int(textInput))
+                          if let num = Int(textInput) {
+                              value.scrollTo(Int(num))
+                          }
+                          
                       }
                     )
                     .keyboardType(.default)
